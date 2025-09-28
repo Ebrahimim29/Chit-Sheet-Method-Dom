@@ -1,0 +1,16 @@
+.text{
+    font-size: 5rem;
+    color: yellowgreen;
+    width: 70%;
+    height: 10rem;
+    text-shadow: 2px 10px 20px red;
+    text-align: center;
+}
+
+.title{
+    background-color: aqua;
+    width: 50%;
+    height: 10rem;
+    border-radius: 2rem;
+    text-align: center;
+}
