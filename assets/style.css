@@ -14,3 +14,40 @@
     border-radius: 2rem;
     text-align: center;
 }
+
+body{
+    text-align: center;
+}
+
+.btn{
+    display: flex;
+    flex-direction: column;  
+}
+
+button{
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    font-size: bolder;
+    background-color: aqua;
+    border: none;
+    border-radius: 2rem;
+    margin: 2rem;
+    cursor: pointer;
+    transition: all 1s;
+    direction: rtl;
+}
+
+button:hover{
+    background-color: blueviolet;
+}
+
+#output{
+    width: 30rem;
+    height: auto;
+    text-align: center;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.342);
+    border-radius: 2rem;
+}
