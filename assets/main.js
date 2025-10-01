@@ -56,7 +56,62 @@ console.log("previousSibling:" , p2.previousSibling);
 console.log(p2.closest("div")); //می ره بالا تا برسه به اولین div
 
 
+// ------Part2(234): Cheat Sheet Dom
 
+// اطلاعات کلی مربوط به المانهای Document
+console.log("عنوان:" , document.title);
+// document.title = "عنوان جدید";
+console.log("URL:" , document.URL);
+console.log("دامنه:" , document.domain);
+console.log("Referrer:" , document.referrer);
+console.log("آخرین تغییر:", document.lastModified);
+console.log("Character set:" , document.characterSet);
+console.log("وضعیت بارگذاری:", document.readyState);
+
+setTimeout(() => {
+    console.log("وضعیت بارگذاری:", document.readyState);    
+} , 1000);
+
+console.log("Active element:", document.activeElement);
+
+// دسترسی به بخش ها و المنت ها
+console.log("عنوان:", document.title);
+console.log("Html کل:", document.documentElement);
+console.log("Head:", document.head);
+console.log("Body:" , document.body);
+console.log("image:", document.images);
+console.log("Links:", document.links);
+console.log("Scripts:", document.scripts);
+console.log("StyleSheets:", document.styleSheets);
+console.log("Forms:", document.forms);
+
+// انتخاب
+console.log("با ID:", document.getElementById("title"));
+console.log("با Class:", document.getElementsByClassName("text"));
+console.log("با Css:", document.querySelector("p.text"));
+console.log("با Tag Name:", document.getElementsByTagName("p"));
+document.querySelectorAll('[name="username"]')
+
+
+// ایجاد المنت
+const newDiv = document.createElement("div");
+newDiv.textContent = "من یک Div جدیدم!";
+document.body.appendChild(newDiv);
+
+// رویداد Dom
+document.addEventListener("DOMContentLoaded", () =>{
+    console.log("Dom کاملا بارگذاری شد!");    
+});
+document.addEventListener("readystatechange", () =>{
+    console.log("وضعیت بارگذاری:", document.readyState);    
+});
+document.addEventListener("visibilitychange", () =>{
+    console.log("وضعیت نمایشی:", document.visibilityState);    
+}); // مربوط به تب مرورگر می باشد
+document.addEventListener("fullscreenchange", () =>{
+    console.log("وضعیت تمام صفحه:", document.fullscreenElement);    
+});
+console.log("وضعیت تمام صفحه:", document.fullscreenElement);
 
 
 // ------Part3(235):Cheat Sheet Window Object
@@ -99,7 +154,7 @@ function scrollDown() {
 
 // ScrollTo
 function scrollToTop() {
-    window.scrollTo({top:0, left:0});
+    window.scrollTo({top:0, behavior: "smooth"});
 }
 
 
