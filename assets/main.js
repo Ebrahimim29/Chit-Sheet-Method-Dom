@@ -158,6 +158,63 @@ function scrollToTop() {
 }
 
 
+// ------part4(236-Cheat Sheet Forms)
+// 1-دسترسی به فرمها
+console.log(document.forms); //همه فرمهای صفحه یک اچ تی ام ال کالکشن هستند
+console.log(document.forms[0]); //اولین فرم
+console.log(document.forms["myForm"]); //روش قدیمی
+
+//-- ShortCut & Helper Function
+const $ = (selector , root = document) => root.querySelector(selector);
+
+let form = $("#myform");
+let msg = $("#msg");
+//qs توی پروژه های بزرگتر بهتره استفاده بشه
+
+const $$ = (selector , root = document) => root.querySelectorAll(selector);
+
+// 2-گرفتن و ست کردن مقدار ورودیها
+console.log(form.username.value); //مقدار اینپوت با name="username"
+
+
+//ست کردن مقدار
+form.username.value = "Hassan";
+
+// const start = ()=>{
+    // form.remember.checked = !form.remember.checked;
+    // form.remember.hidden = !form.remember.hidden; //پنهان و ظاهر کردن فیلد
+    // form.remember.disabled = true; //غیر فعال کردن فیلد
+// }
+
+//3-چک باکس و رادیو
+const gender = ()=>{
+    console.log(form.gender.value);
+    form.gender.disabled = true;    
+}
+
+// 4- پنهان و آشکار کردن المان
+msg.hidden = true;
+msg.hidden = false;
+
+// 5- ارسال فرم با جاوااسکریپت
+const start = () =>{
+    //form.submit(); //ارسال خودکار بدون کلیک کاربر
+    // form.submit();
+    //form.reset(); //بازگرداندن مقادیر فرم به حالت اولیه
+    // form.reset();
+    //form.focus(); //انتقال فوکوس به یک ورودی
+    // form.username.focus();
+    //form.blur(); //خارج کردن فوکوس
+    // form.username.blur();
+    //form.select(); //انتخاب متن داخل اینپوت
+    // form.username.select();
+}
+
+
+// part236- 7:55
+
+
+
 
 
 
