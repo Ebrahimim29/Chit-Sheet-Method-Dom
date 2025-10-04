@@ -210,8 +210,36 @@ const start = () =>{
     // form.username.select();
 }
 
+// Submit:وقتی فرم ارسال میشه
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); //جلوگیری از ارسال واقعی
+    msg.innerText = "فرم ارسال شد،مقدار ✅:" + form.username.value;
+});
 
-// part236- 7:55
+//Reset: وقتی فرم ریست میشه
+form.addEventListener("reset", function() {
+    msg.innerText = "فرم ریست شد ♻";
+});
+
+//Input: هر بار که کاربر چیزی تایپ می کنه    
+form.username.addEventListener("input", function() {
+    msg.innerText = "در حال تایپ: " + form.username.value;
+});
+
+//Change: وقتی مقدار ورودی تغییر می کنه و کاربر فوکوس رو از اون خارج می کنه
+
+//Input , Change: شبیه به هم هستند ولی اینپوت در لحظه تایپ اعمال میشه ولی برای Change باید حتما بعد از تایپ المان اینپوت از حالت فوکوس خارج بشه
+
+//Focus: وقتی یک فیلد فوکوس می گیره
+form.password.addEventListener("focus", function(){
+    msg.innerText = "رمز عبور فوکوس گرفت";
+});
+
+//Blur: وقتی فوکوس از فیلد خارج میشه
+form.password.addEventListener("blur", function() {
+    msg.innerText = "رمز عبور فوکوس رو از دست داد";
+});
+
 
 
 
